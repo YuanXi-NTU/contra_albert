@@ -1,0 +1,11 @@
+Performing system checks...
+
+process fin
+System check identified no issues (0 silenced).
+December 20, 2021 - 08:43:46
+Django version 3.2, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8002/
+Quit the server with CTRL-BREAK.
+query °®¹ú
+[20459 20483  8732 20495 27579 12270 12377 22593 17512  8843 20385]
+int64

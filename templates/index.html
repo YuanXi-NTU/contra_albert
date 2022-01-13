@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="search">
+    <form class="search-card" action="." method="post">{% csrf_token %}
+      <div class="search-input-box">
+        <input class="search-card-input" type="text" name="searchText" autocomplete="off" placeholder="输入并搜索">
+       </div>
+    </form>
+</div>
+
+
+{% if info %}
+<table class="search-result">
+    <tr>
+    <caption>搜索内容：{{ info }}</caption>
+    </tr>
+    {% if results %}
+    {% for result in results %}
+    <tr>
+        <td class="score">{{ result.score|floatformat:3 }}</td>
+        <td>{{ result.text }}</td>
+    </tr>
+    {% endfor %}
+    {% else %}
+    <tr><td colspan="2">暂无搜索结果！</td></tr>
+    {% endif %}
+</table>
+{% endif %}
+
+{% endblock content %}
